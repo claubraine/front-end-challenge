@@ -45,3 +45,183 @@ Seja criativo, construa um layout pensando no usuário final, e sinta-se a vonta
 1. Efetue o fork deste repositório e crie um branch com o seu nome e sobrenome. (exemplo: fulano-dasilva);
 1. Após finalizar o desafio, crie um Pull Request;
 1. Aguarde algum contribuidor realizar o code review;
+
+# Início challenge
+
+> Este Projeto foi desenvolvido em react.js
+> Foi utilizado a biblioteca mdbootstrap -> https://mdbootstrap.com/docs/react/getting-started/installation/
+> Versão node.js v16.13.1
+> Download updated version - https://nodejs.org
+
+> Dependências:
+
+```bash
+        "axios": "^0.24.0",
+        "html-react-parser": "^1.4.5",
+        "mdbreact": "4.21.1",
+        "react": "^16.9.0",
+        "react-dom": "^16.9.0",
+        "react-router-dom": "^5.0.1",
+        "react-scripts": "3.0.1"
+```
+
+> Clone o projeto:
+
+```bash
+$ git clone https://github.com/claubraine/front-end-challenge.git
+```
+
+## Instações dependenvias do projeto
+> Depois de clonar o projeto, entre na pasta do mesmo, e digite:
+```bash
+$ yarn
+```
+
+## Executando o Projeto
+> The Command below updates the swagger file, generates the files in the build folder and puts the project into execution
+```bash
+$ yarn start
+```
+
+## Codebase Structure
+
+```bash
+     public/
+     |-- index.html
+     |
+     src/
+     |-- assets/
+     |    |-- img/ 
+     |         |-- 404.jpg
+     |         |-- logo.jpg
+     | 
+     |-- componentes/   
+     |    |-- docsLink.js                               
+     |    |-- menuLink.js                               
+     |    |-- post.js                               
+     |    |-- postCarousel.js                               
+     |    |-- postCategorias.js                               
+     |    |-- postList.js                               
+     |    |-- sectionContainer.js                               
+     |                           
+     |-- pages/
+     |    |-- HomePage.js 
+     |    |-- BlogNavPage.js 
+     |    |-- PostNavPage.js 
+     |    |-- SobreNavPage.js 
+     |    |-- SobreNavPage.js
+     |
+     |-- services/ 
+     |    |-- wordpressApi.js 
+     |                              
+     |-- App.js                                  
+     |-- App.test.js                                  
+     |-- index.css                                  
+     |-- index.js                                  
+     |-- registerServiceWorker.js                                  
+     |-- Routes.js                                  
+     |-- style.css
+     |    
+     .gitignore
+     package.json
+     README.md
+     |
+     |-- ************************************************************************
+```
+
+<br />
+
+# Layout
+
+## Home
+![alt text](https://github.com/claubraine/challenge-backend/blob/main/src/assets/img/01.png)
+<br />
+
+## Blog
+![alt text](https://github.com/claubraine/challenge-backend/blob/main/src/assets/img/02.png)
+<br />
+
+## Post
+![alt text](https://github.com/claubraine/challenge-backend/blob/main/src/assets/img/03.png)
+<br />
+
+## Sobre
+![alt text](https://github.com/claubraine/challenge-backend/blob/main/src/assets/img/04.png)
+<br />
+
+# Entrega
+
+> OK - Página inicial
+> OK - Página Interna
+> OK - Uso API  - https://blog.apiki.com/wp-json/wp/v2/
+> OK - Utilização metodologias para orgazinização
+> OK - Lib para criação de interfaces - React
+
+# Não Entregue
+> Botão nomeado Carregar mais
+Não foi possivel fazer a entrega desta funcionalide por sua complexidade e por estar perto da entrega do projeto.
+</br>
+Estamos retornando os valores de X-WP-TotalPages, que pode ser utilizado para desenvolvimentos futuros
+> Arquivo src/services/wordpressApi.js 
+```bash
+const getPosts = (idCategoria) =>
+  new Promise((resolve, reject) => {
+    
+    const endpoint = baseurl + postsEndpoint + 'posts?categories=' + idCategoria;   
+     
+    fetch(endpoint)
+      .then(response => response.json()
+        .then(json => ({
+          totalPages: response.headers.get("x-wp-totalpages"),
+          totalPosts: response.headers.get("x-wp-total"),
+          allHeaders: response.headers,
+          json
+        })))
+      .then(result => {
+        console.log(endpoint); 
+        console.log(result);
+        resolve(result);
+      }).catch((err) => {
+        reject(err);
+      });
+  });
+```
+> Podemos usar para Desenvolvimentos futuros as blibiotecas abaixo:
+> https://www.npmjs.com/package/react-paginate
+> https://reactjsexample.com/tag/pagination/
+
+# Observações
+
+## Utilizaçao endopoint
+Em vez de utilizar o endopoint -> https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518 
+</br>
+Utilizamos -> https://blog.apiki.com/wp-json/wp/v2/posts?categories=518
+</br>
+Esta escolha se deve por não consguirmos retornar informações diferentes quando se alterava o código da categoria
+
+## Imagem destacada
+Para mostrar a imagem destacada do post especifico foi utilizado o atributo -> ['_embedded']['wp:featuredmedia'][0].source_url
+</br>
+Ja para mostrar a imagem destacada na lista de notícias/slide, foi utilizado o atributo -> yoast_head_json.twitter_image
+</br>
+Esta escolha se deve por não conseguirmos retornar informações necessarias utilizabo o endopoint
+</br>
+https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518  ou
+</br>
+https://blog.apiki.com/wp-json/wp/v2/posts?categories=518
+
+# A mais
+> Mostra as 3 ultimas postagens no formato Slides na pagina Home e Blog
+> Mostra a lista das Categorias no rodopé
+> Poder filtrar as notícias por Categorias, clicando em uma de suas opções da Listagem no rodapé
+
+## Considerações finais
+Gostei muito de programar este desafio, não tinha feito algo parecido, aprendi muito, e vejo que tenho muito ainda em aprender.
+
+
+
+
+
+
+
+
