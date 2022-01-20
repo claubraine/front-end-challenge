@@ -81,7 +81,7 @@ $ yarn
 ```
 
 ## Executando o Projeto
-> The Command below updates the swagger file, generates the files in the build folder and puts the project into execution
+> Dentro da pásta do projeto digite:
 ```bash
 $ yarn start
 ```
