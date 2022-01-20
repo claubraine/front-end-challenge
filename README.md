@@ -49,10 +49,13 @@ Seja criativo, construa um layout pensando no usuário final, e sinta-se a vonta
 # Início challenge
 
 > Este Projeto foi desenvolvido em react.js
+<br />
 > Foi utilizado a biblioteca mdbootstrap -> https://mdbootstrap.com/docs/react/getting-started/installation/
+<br />
 > Versão node.js v16.13.1
+<br />
 > Download updated version - https://nodejs.org
-
+<br />
 > Dependências:
 
 ```bash
@@ -134,33 +137,37 @@ $ yarn start
 # Layout
 
 ## Home
-![alt text](https://github.com/claubraine/challenge-backend/blob/main/src/assets/img/01.png)
+![alt text](https://github.com/claubraine/challenge-backend/blob/main/files/01.png)
 <br />
 
 ## Blog
-![alt text](https://github.com/claubraine/challenge-backend/blob/main/src/assets/img/02.png)
+![alt text](https://github.com/claubraine/challenge-backend/blob/main/files/02.png)
 <br />
 
 ## Post
-![alt text](https://github.com/claubraine/challenge-backend/blob/main/src/assets/img/03.png)
+![alt text](https://github.com/claubraine/challenge-backend/blob/main/files/03.png)
 <br />
 
 ## Sobre
-![alt text](https://github.com/claubraine/challenge-backend/blob/main/src/assets/img/04.png)
+![alt text](https://github.com/claubraine/challenge-backend/blob/main/files/04.png)
 <br />
 
 # Entrega
 
 > OK - Página inicial
+<br />
 > OK - Página Interna
+<br />
 > OK - Uso API  - https://blog.apiki.com/wp-json/wp/v2/
+<br />
 > OK - Utilização metodologias para orgazinização
+<br />
 > OK - Lib para criação de interfaces - React
 
 # Não Entregue
 > Botão nomeado Carregar mais
 Não foi possivel fazer a entrega desta funcionalide por sua complexidade e por estar perto da entrega do projeto.
-</br>
+<br />
 Estamos retornando os valores de X-WP-TotalPages, que pode ser utilizado para desenvolvimentos futuros
 > Arquivo src/services/wordpressApi.js 
 ```bash
@@ -201,13 +208,13 @@ Esta escolha se deve por não consguirmos retornar informações diferentes quan
 
 ## Imagem destacada
 Para mostrar a imagem destacada do post especifico foi utilizado o atributo -> ['_embedded']['wp:featuredmedia'][0].source_url
-</br>
+<br />
 Ja para mostrar a imagem destacada na lista de notícias/slide, foi utilizado o atributo -> yoast_head_json.twitter_image
-</br>
+<br />
 Esta escolha se deve por não conseguirmos retornar informações necessarias utilizabo o endopoint
-</br>
+<br />
 https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518  ou
-</br>
+<br />
 https://blog.apiki.com/wp-json/wp/v2/posts?categories=518
 
 # A mais
