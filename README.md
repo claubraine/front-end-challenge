@@ -49,13 +49,13 @@ Seja criativo, construa um layout pensando no usuário final, e sinta-se a vonta
 # Início challenge
 
 > Este Projeto foi desenvolvido em react.js
-<br />
+
 > Foi utilizado a biblioteca mdbootstrap -> https://mdbootstrap.com/docs/react/getting-started/installation/
-<br />
+
 > Versão node.js v16.13.1
-<br />
+
 > Download updated version - https://nodejs.org
-<br />
+
 > Dependências:
 
 ```bash
@@ -155,19 +155,19 @@ $ yarn start
 # Entrega
 
 > OK - Página inicial
-<br />
+
 > OK - Página Interna
-<br />
+
 > OK - Uso API  - https://blog.apiki.com/wp-json/wp/v2/
-<br />
+
 > OK - Utilização metodologias para orgazinização
-<br />
+
 > OK - Lib para criação de interfaces - React
 
 # Não Entregue
 > Botão nomeado Carregar mais
 Não foi possivel fazer a entrega desta funcionalide por sua complexidade e por estar perto da entrega do projeto.
-<br />
+
 Estamos retornando os valores de X-WP-TotalPages, que pode ser utilizado para desenvolvimentos futuros
 > Arquivo src/services/wordpressApi.js 
 ```bash
@@ -204,9 +204,9 @@ https://blog.apiki.com/wp-json/wp/v2/posts?categories=518
 
 # A mais
 > Mostra as 3 ultimas postagens no formato Slides na pagina Home e Blog
-<br />
+
 > Mostra a lista das Categorias no rodopé
-<br />
+
 > Poder filtrar as notícias por Categorias, clicando em uma de suas opções da Listagem no rodapé
 
 ## Considerações finais
