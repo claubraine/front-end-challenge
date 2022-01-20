@@ -210,7 +210,7 @@ https://blog.apiki.com/wp-json/wp/v2/posts?categories=518
 > Poder filtrar as notícias por Categorias, clicando em uma de suas opções da Listagem no rodapé
 
 ## Considerações finais
-Gostei muito de programar este desafio, não tinha feito algo parecido, aprendi muito, e vejo que tenho muito ainda em aprender.
+Gostei muito de programar este desafio, não tinha feito algo parecido, aprendi muito, e vejo que tenho muito para aprender.
 
 
 
