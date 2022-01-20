@@ -137,19 +137,19 @@ $ yarn start
 # Layout
 
 ## Home
-![alt text](https://github.com/claubraine/challenge-backend/blob/main/files/01.png)
+![alt text](https://github.com/claubraine/front-end-challenge/blob/master/files/01.png)
 <br />
 
 ## Blog
-![alt text](https://github.com/claubraine/challenge-backend/blob/main/files/02.png)
+![alt text](https://github.com/claubraine/front-end-challenge/blob/master/files/02.png)
 <br />
 
 ## Post
-![alt text](https://github.com/claubraine/challenge-backend/blob/main/files/03.png)
+![alt text](https://github.com/claubraine/front-end-challenge/blob/master/files/03.png)
 <br />
 
 ## Sobre
-![alt text](https://github.com/claubraine/challenge-backend/blob/main/files/04.png)
+![alt text](https://github.com/claubraine/front-end-challenge/blob/master/files/04.png)
 <br />
 
 # Entrega
@@ -171,27 +171,12 @@ Não foi possivel fazer a entrega desta funcionalide por sua complexidade e por 
 Estamos retornando os valores de X-WP-TotalPages, que pode ser utilizado para desenvolvimentos futuros
 > Arquivo src/services/wordpressApi.js 
 ```bash
-const getPosts = (idCategoria) =>
-  new Promise((resolve, reject) => {
-    
-    const endpoint = baseurl + postsEndpoint + 'posts?categories=' + idCategoria;   
-     
-    fetch(endpoint)
-      .then(response => response.json()
-        .then(json => ({
+        json => ({
           totalPages: response.headers.get("x-wp-totalpages"),
           totalPosts: response.headers.get("x-wp-total"),
           allHeaders: response.headers,
           json
-        })))
-      .then(result => {
-        console.log(endpoint); 
-        console.log(result);
-        resolve(result);
-      }).catch((err) => {
-        reject(err);
-      });
-  });
+        })
 ```
 > Podemos usar para Desenvolvimentos futuros as blibiotecas abaixo:
 > https://www.npmjs.com/package/react-paginate
@@ -219,7 +204,9 @@ https://blog.apiki.com/wp-json/wp/v2/posts?categories=518
 
 # A mais
 > Mostra as 3 ultimas postagens no formato Slides na pagina Home e Blog
+<br />
 > Mostra a lista das Categorias no rodopé
+<br />
 > Poder filtrar as notícias por Categorias, clicando em uma de suas opções da Listagem no rodapé
 
 ## Considerações finais
