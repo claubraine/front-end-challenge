@@ -74,7 +74,7 @@ Seja criativo, construa um layout pensando no usuário final, e sinta-se a vonta
 $ git clone https://github.com/claubraine/front-end-challenge.git
 ```
 
-## Instações dependenvias do projeto
+## Instações dependencias do projeto
 > Depois de clonar o projeto, entre na pasta do mesmo, e digite:
 ```bash
 $ yarn
